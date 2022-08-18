@@ -1,0 +1,25 @@
+{
+    "projects": [
+      {
+        "id": 1,
+        "title": "DNA pattern matching",
+        "content": "A Website to check if a patient is indicated having a disease based on their DNA sequence, built with ReactJS (front-end), NodeJs (back-end), PostgreSQL (database) loaded in Heroku.",
+        "start_date": "2022-07-01T00:00:00.000Z",
+        "end_date": "2022-08-01T00:00:00.000Z"
+      },
+      {
+        "id": 2,
+        "title": "Image Compression",
+        "content": "An interactive website to compress image built with Vue and Flask that accept input image files with various formats and the desired level of image compression. This website will display the input image, the output image, the run time, and the percentage compression results. User also allowed to download the result.",
+        "start_date": "2022-07-01T00:00:00.000Z",
+        "end_date": "2022-08-01T00:00:00.000Z"
+      },
+      {
+        "id": 3,
+        "title": "WhyNotSearch - Folder Crawling",
+        "content": "A desktop application to search file or folder (s) using BFS and DFS algorithms using C# with .NET and MSAGL. This app can search for matching files from parent directory until first/all files are found or no files are found if none exists.",
+        "start_date": "2022-07-01T00:00:00.000Z",
+        "end_date": "2022-08-01T00:00:00.000Z"
+      }
+    ]
+}
