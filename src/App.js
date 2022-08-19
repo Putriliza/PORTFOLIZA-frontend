@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './styles/App.css';
 
-import Project from './components/Project'
+import Projects from './components/list/Projects'
 import projectService from './services/projects'
 
 const App = () => {
@@ -18,14 +18,7 @@ const App = () => {
   return (
     <div className='App'>
       <h1>Projects</h1>
-      <ul>
-        {projects.map(project => 
-          <Project
-            key={project.id}
-            project={project}
-          />
-        )}
-      </ul>
+      <Projects projects={projects} />
     </div>
   )
 }
