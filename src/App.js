@@ -8,9 +8,7 @@ import Projects from './components/list/Projects'
 import Achievements from './components/list/Achievements'
 import Experiences from './components/list/Experiences'
 
-import projectService from './services/projects'
-import achievementService from './services/achievements'
-import experienceService from './services/experiences'
+import service from './services/service'
 
 import { Navbar, Nav } from 'react-bootstrap'
 
@@ -22,27 +20,23 @@ const Home = () => (
 
 const App = () => {
   const [projects, setProject] = useState([])
-  const [achievements, setAchievement] = useState([])
   const [experiences, setExperience] = useState([])
+  const [achievements, setAchievement] = useState([])
   useEffect(() => {
-    projectService
-      .getAll()
+    service
+      .getAll('/api/projects')
       .then(initialProjects => {
         setProject(initialProjects)
       })
-  }, [])
-  useEffect(() => {
-    achievementService
-      .getAll()
-      .then(initialAchievements => {
-        setAchievement(initialAchievements)
-      })
-  }, [])
-  useEffect(() => {
-    experienceService
-      .getAll()
+    service
+      .getAll('/api/experiences')
       .then(initialExperiences => {
         setExperience(initialExperiences)
+      })
+    service
+      .getAll('/api/achievements')
+      .then(initialAchievements => {
+        setAchievement(initialAchievements)
       })
   }, [])
 
