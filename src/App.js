@@ -5,7 +5,10 @@ import {
 } from "react-router-dom"
 
 import Projects from './components/list/Projects'
+import Achievements from './components/list/Achievements'
+
 import projectService from './services/projects'
+import achievementService from './services/achievements'
 
 import { Navbar, Nav } from 'react-bootstrap'
 
@@ -15,17 +18,21 @@ const Home = () => (
   <div> <h2>HALOWWWW</h2> </div>
 )
 
-const Achievement = () => (
-  <div> <h2>MEONG MEONG</h2> </div>
-)
-
 const App = () => {
   const [projects, setProject] = useState([])
+  const [achievements, setAchievement] = useState([])
   useEffect(() => {
     projectService
       .getAll()
       .then(initialProjects => {
         setProject(initialProjects)
+      })
+  }, [])
+  useEffect(() => {
+    achievementService
+      .getAll()
+      .then(initialAchievements => {
+        setAchievement(initialAchievements)
       })
   }, [])
 
@@ -51,7 +58,7 @@ const App = () => {
 
         <Routes>
           <Route path="/projects" element={<Projects projects={projects} />} />
-          <Route path="/achievements" element={<Achievement />} />
+          <Route path="/achievements" element={<Achievements achievements={achievements} />} />
           <Route path="/" element={<Home />} />
         </Routes>
 
