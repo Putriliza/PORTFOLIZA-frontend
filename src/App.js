@@ -6,9 +6,11 @@ import {
 
 import Projects from './components/list/Projects'
 import Achievements from './components/list/Achievements'
+import Experiences from './components/list/Experiences'
 
 import projectService from './services/projects'
 import achievementService from './services/achievements'
+import experienceService from './services/experiences'
 
 import { Navbar, Nav } from 'react-bootstrap'
 
@@ -21,6 +23,7 @@ const Home = () => (
 const App = () => {
   const [projects, setProject] = useState([])
   const [achievements, setAchievement] = useState([])
+  const [experiences, setExperience] = useState([])
   useEffect(() => {
     projectService
       .getAll()
@@ -33,6 +36,13 @@ const App = () => {
       .getAll()
       .then(initialAchievements => {
         setAchievement(initialAchievements)
+      })
+  }, [])
+  useEffect(() => {
+    experienceService
+      .getAll()
+      .then(initialExperiences => {
+        setExperience(initialExperiences)
       })
   }, [])
 
@@ -50,6 +60,9 @@ const App = () => {
                 <Link to="/projects">projects</Link>
               </Nav.Link>
               <Nav.Link href="#" as="span">
+                <Link to="/experiences">experiences</Link>
+              </Nav.Link>
+              <Nav.Link href="#" as="span">
                 <Link to="/achievements">achievements</Link>
               </Nav.Link>
             </Nav>
@@ -58,6 +71,7 @@ const App = () => {
 
         <Routes>
           <Route path="/projects" element={<Projects projects={projects} />} />
+          <Route path="/experiences" element={<Experiences experiences={experiences} />} />
           <Route path="/achievements" element={<Achievements achievements={achievements} />} />
           <Route path="/" element={<Home />} />
         </Routes>
