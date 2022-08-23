@@ -5,14 +5,17 @@ const Projects = ({ projects }) => {
     const prjRef = useNav('Project');
 
     return (
-        <ul ref={prjRef} id="projectContainer">
-            {projects.map(project => 
-            <ProjectItem
-                key={project.id}
-                project={project}
-            />
-            )}
-        </ul>
+        <div ref={prjRef} id="projectContainer">
+            <h1>Projects</h1>
+            <ul>
+                {projects.map(project => 
+                <ProjectItem
+                    key={project.id}
+                    project={project}
+                />
+                )}
+            </ul>
+        </div>
     )
   }
   

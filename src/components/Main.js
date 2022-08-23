@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react'
 import service from '../services/service'
-import Home from './Home';
+import Home from './home/Home';
 import Experiences from './list/Experiences';
 import Achievements from './list/Achievements';
 import Projects from './list/Projects';
