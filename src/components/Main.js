@@ -29,12 +29,12 @@ const Main = () => {
   }, [])
 
   return (
-	<main>
-		<Home />
-		<Projects projects={projects}/>
-        <Experiences experiences={experiences} />
-        <Achievements achievements={achievements}/>
-	</main>
+    <main className='container'>
+      <Home />
+      <Projects projects={projects}/>
+          <Experiences experiences={experiences} />
+          <Achievements achievements={achievements}/>
+    </main>
   )
 }
 

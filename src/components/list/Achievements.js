@@ -1,10 +1,8 @@
 import AchievementItem from "../item/AchievementItem"
-import { useNav } from '../../customHooks/useNav';
 
 const Achievements = ({ achievements }) => {
-    const achievRef = useNav('Achievement');
     return (
-        <div ref={achievRef} id="achievementContainer">
+        <div id="achievementContainer">
             <h1>Achievements</h1>
             <ul>
                 {achievements.map(achievement => 

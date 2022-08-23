@@ -1,15 +1,12 @@
-import Nav from './components/nav/Nav';
-import NavProvider from './context/NavContext'
+import MyNav from './components/nav/MyNav';
 import Main from './components/Main';
 
 const App = () => {
 
   return (
-    <div className='container'>
-      <NavProvider>
-        <Nav />
-        <Main />
-      </NavProvider>
+    <div>
+      <MyNav />
+      <Main />
     </div>
 
   )

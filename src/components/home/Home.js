@@ -1,10 +1,8 @@
 import React from 'react';
-import { useNav } from '../../customHooks/useNav';
 
 const Home = () => {
-  const homeRef = useNav('Home');
   return (
-    <div ref={homeRef} id="homeContainer" >
+    <div id="homeContainer" >
       <img src={`${process.env.PUBLIC_URL}/assets/home/PutriNurhaliza.jpg`} alt="me" className='img-fluid' />
       <h1>Hello!</h1>
       <h2>Putri Nurhaliza</h2>

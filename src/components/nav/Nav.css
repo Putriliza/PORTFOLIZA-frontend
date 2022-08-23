@@ -2,7 +2,7 @@
 	width: 100%;
 	z-index: 10;
 	top: 0;
-	padding: 1.2em 0;
+	padding: 0;
 	color: white;
 	display: flex;
 	justify-content: space-between;
@@ -13,7 +13,7 @@
 	align-items: flex-start;
 }
 
-.show, .collapsing {
+.show .offcanvas-body {
 	display: flex;
 	flex-direction: column;
 }
@@ -21,7 +21,7 @@
 .navbar-toggler-icon {
 	width: 1em;
 	height: 1em;
-	margin: 10px;
+	margin: 2px;
 }
 
 nav span {
@@ -34,6 +34,12 @@ nav span {
 	justify-content: flex-start;
 	align-items: flex-start;
 	text-align: left;
+	color: #ccc;
+}
+
+nav span.activeClass {
+	color: white;
+	border-bottom: 1px solid white;
 }
 
 nav span:hover {
