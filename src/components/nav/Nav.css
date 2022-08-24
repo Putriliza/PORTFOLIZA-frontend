@@ -36,12 +36,11 @@ a {
 	cursor: pointer;
 }
 
-a:hover {
+button:hover a {
 	color: blueviolet;
-	background-color: white;
 }
 
-a.active {
+button a.active {
 	color: blueviolet;
 	background-color: white;
 }

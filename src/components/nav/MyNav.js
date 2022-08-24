@@ -6,6 +6,8 @@ import Container from 'react-bootstrap/Container';
 import { Link } from "react-scroll";
 import './Nav.css';
 
+import Button from '@mui/material/Button';
+
 import ChaletRoundedIcon from '@mui/icons-material/ChaletRounded';
 import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
 import AutoAwesomeMotionOutlinedIcon from '@mui/icons-material/AutoAwesomeMotionOutlined';
@@ -54,42 +56,48 @@ const MyNav = () => {
 							>
 							<ChaletRoundedIcon /> Home
 						</Link> */}
-						<Link
-							activeClass="active"
-							to="projectContainer"
-							spy={true}
-							smooth={true}
-							offset={offsetValue}
-							duration={100}
-							className="p-3 text-decoration-none"
-							onClick={closeOffCanvas}
-							>
-							<AutoAwesomeMotionOutlinedIcon /> Projects
-						</Link>
-						<Link
-							activeClass="active"
-							to="experienceContainer"
-							spy={true}
-							smooth={true}
-							offset={offsetValue}
-							duration={100}
-							className="p-3 text-decoration-none"
-							onClick={closeOffCanvas}
-							>
-							<BadgeOutlinedIcon />Experiences
-						</Link>
-						<Link
-							activeClass="active"
-							to="achievementContainer"
-							spy={true}
-							smooth={true}
-							offset={offsetValue}
-							duration={100}
-							className="p-3 text-decoration-none"
-							onClick={closeOffCanvas}
-							>
-							<AutoAwesomeOutlinedIcon /> Achievements
-						</Link>
+						<Button color="secondary" style={{justifyContent:"flex-start"}}>
+							<Link
+								activeClass="active"
+								to="projectContainer"
+								spy={true}
+								smooth={true}
+								offset={offsetValue}
+								duration={100}
+								className="p-3 text-decoration-none"
+								onClick={closeOffCanvas}
+								>
+								<AutoAwesomeMotionOutlinedIcon /> Projects
+							</Link>
+						</Button>
+						<Button color="secondary" style={{justifyContent:"flex-start"}}>
+							<Link
+								activeClass="active"
+								to="experienceContainer"
+								spy={true}
+								smooth={true}
+								offset={offsetValue}
+								duration={100}
+								className="p-3 text-decoration-none"
+								onClick={closeOffCanvas}
+								>
+								<BadgeOutlinedIcon /> Experiences
+							</Link>
+						</Button>
+						<Button color="secondary" style={{justifyContent:"flex-start"}}>
+							<Link
+								activeClass="active"
+								to="achievementContainer"
+								spy={true}
+								smooth={true}
+								offset={offsetValue}
+								duration={100}
+								className="p-3 text-decoration-none"
+								onClick={closeOffCanvas}
+								>
+								<AutoAwesomeOutlinedIcon /> Achievements
+							</Link>
+						</Button>
 					</Nav>
 				</Offcanvas.Body>
             </Navbar.Offcanvas>
