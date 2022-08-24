@@ -6,6 +6,11 @@ import Container from 'react-bootstrap/Container';
 import { Link } from "react-scroll";
 import './Nav.css';
 
+import ChaletRoundedIcon from '@mui/icons-material/ChaletRounded';
+import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
+import AutoAwesomeMotionOutlinedIcon from '@mui/icons-material/AutoAwesomeMotionOutlined';
+import BadgeOutlinedIcon from '@mui/icons-material/BadgeOutlined';
+
 const MyNav = () => {
 	const offCanvasRef = useRef();
 	const offsetValue = -56;
@@ -20,9 +25,9 @@ const MyNav = () => {
 	}
 	
 	return (
-		<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+		<Navbar collapseOnSelect expand="lg" variant="light">
 			<Container fluid>
-				<Navbar.Brand href="#">PUTRI NURHALIZA</Navbar.Brand>
+				<Navbar.Brand href="#">Putri Nurhaliza</Navbar.Brand>
 				<Navbar.Toggle aria-controls={`offcanvasNavbar-expand-lg`} />
 				<Navbar.Offcanvas
 				id={`offcanvasNavbar-expand-lg`}
@@ -37,18 +42,18 @@ const MyNav = () => {
 				</Offcanvas.Header>
 				<Offcanvas.Body>
 					<Nav>
-						<Link
+						{/* <Link
 							activeClass="active"
 							to="homeContainer"
 							spy={true}
 							smooth={true}
 							offset={offsetValue}
 							duration={100}
-							className="p-3 border-bottom border-dark text-decoration-none"
+							className="p-3 text-decoration-none"
 							onClick={closeOffCanvas}
 							>
-							Home
-						</Link>
+							<ChaletRoundedIcon /> Home
+						</Link> */}
 						<Link
 							activeClass="active"
 							to="projectContainer"
@@ -56,10 +61,10 @@ const MyNav = () => {
 							smooth={true}
 							offset={offsetValue}
 							duration={100}
-							className="p-3 border-bottom border-dark text-decoration-none"
+							className="p-3 text-decoration-none"
 							onClick={closeOffCanvas}
 							>
-							Projects
+							<AutoAwesomeMotionOutlinedIcon /> Projects
 						</Link>
 						<Link
 							activeClass="active"
@@ -68,10 +73,10 @@ const MyNav = () => {
 							smooth={true}
 							offset={offsetValue}
 							duration={100}
-							className="p-3 border-bottom border-dark text-decoration-none"
+							className="p-3 text-decoration-none"
 							onClick={closeOffCanvas}
 							>
-							Experiences
+							<BadgeOutlinedIcon />Experiences
 						</Link>
 						<Link
 							activeClass="active"
@@ -80,10 +85,10 @@ const MyNav = () => {
 							smooth={true}
 							offset={offsetValue}
 							duration={100}
-							className="p-3 border-bottom border-dark text-decoration-none"
+							className="p-3 text-decoration-none"
 							onClick={closeOffCanvas}
 							>
-							Achievements
+							<AutoAwesomeOutlinedIcon /> Achievements
 						</Link>
 					</Nav>
 				</Offcanvas.Body>

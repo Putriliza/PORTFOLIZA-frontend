@@ -3,10 +3,10 @@
 	z-index: 10;
 	top: 0;
 	padding: 0;
-	color: white;
 	display: flex;
 	justify-content: space-between;
 	position: sticky;
+	background-color: floralwhite;
 }
 
 .navbar-collapse {
@@ -18,31 +18,30 @@
 	flex-direction: column;
 }
 
+@media (min-width: 992px) {
+	.navbar-expand-lg .offcanvas-body {
+		justify-content: flex-end;
+	}
+}
+
 .navbar-toggler-icon {
 	width: 1em;
 	height: 1em;
 	margin: 2px;
 }
 
-nav span {
-	font-size: 18px;
-	border-bottom: 1px solid transparent;
-	transition: border-bottom 0.2s ease;
-	transition-delay: 0.25s;
-	margin: 1em;
-	padding-bottom: 0.3em;
-	justify-content: flex-start;
-	align-items: flex-start;
-	text-align: left;
-	color: #ccc;
-}
 
-nav span.activeClass {
-	color: white;
-	border-bottom: 1px solid white;
-}
-
-nav span:hover {
+a {
+    color: black;
 	cursor: pointer;
-	border-bottom: 1px solid white;
+}
+
+a:hover {
+	color: blueviolet;
+	background-color: white;
+}
+
+a.active {
+	color: blueviolet;
+	background-color: white;
 }
