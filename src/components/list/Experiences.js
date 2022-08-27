@@ -1,14 +1,27 @@
 import ExperienceItem from "../item/ExperienceItem"
 import Carousel from 'react-bootstrap/Carousel';
+import './Experience.css'
 
 const Experiences = ({ experiences }) => {
     return (
-        <div id="experienceContainer">
-            <h1>Experiences</h1>
+        <div id="experienceContainer"
+            style={{minHeight: '90vh',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+            }}
+        >
+            <h1 style={{color: 'white',
+                textAlign:'center',
+                margin: '50px 0',
+                textShadow: '3px 1px 15px darkslateblue',
+                fontFamily: 'Cookie, cursive',
+                fontSize: '80px'}}>
+                <b>Experiences</b>
+            </h1>
             <Carousel
                 variant="dark"
-                style={{padding: "0 10%"}}
-                indicators={false}
             >
                 {experiences.map(experience => 
                     <Carousel.Item key={experience.id}>

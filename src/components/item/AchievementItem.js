@@ -11,7 +11,7 @@ const AchievementItem = ({ achievement }) => {
                 <CardMedia
                         component="img"
                         height="400"
-                        image={`${process.env.PUBLIC_URL+achievement.photoUrl}`}
+                        image={`${process.env.PUBLIC_URL+achievement.imgLink}`}
                         alt={achievement.event}
                     />
             </CardActionArea>
@@ -19,7 +19,7 @@ const AchievementItem = ({ achievement }) => {
                 <Typography gutterBottom variant="h4" component="div">
                     {achievement.position} at {achievement.event}
                 </Typography>
-                <Typography variant="body2" component="div">
+                <Typography variant="body1" component="div">
                     <h5>by {achievement.organizer}</h5>
                     <p>{achievement.content}</p>
                     <p className='text-secondary'>{achievement.time}</p>

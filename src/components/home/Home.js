@@ -4,8 +4,8 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Image from 'react-bootstrap/Image'
-import Chip from '@mui/material/Chip';
 
+import Chip from '@mui/material/Chip';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 
@@ -18,6 +18,18 @@ const Item = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(5),
   textAlign: 'left',
   color: theme.palette.text.primary,
+  [theme.breakpoints.up('lg')]: {
+    margin:'0 -200px 0 0', padding:'50px 200px 50px 50px'
+  },
+  [theme.breakpoints.down('lg')]: {
+    margin:'0 -150px 0 0', padding:'50px 150px 50px 50px'
+  },
+  [theme.breakpoints.down('md')]: {
+    margin:'-150px 0 0 0', padding:'150px 50px 50px 50px'
+  },
+  [theme.breakpoints.down('sm')]: {
+    margin:'-250px 0 0 0', padding:'250px 50px 50px 50px'
+  },
 }));
 
 const Home = () => {
@@ -33,7 +45,12 @@ const Home = () => {
         
         <Grid item xs={8} sm={8} md={8} key={1} order={{ xs: 2, sm: 2, md:1 }}>
           <Item>
-            <h1>Hello,</h1>
+          <h1 style={{color: 'black',
+                textShadow: '3px 1px 15px white',
+                fontFamily: 'Cookie, cursive',
+                fontSize: '60px'}}>
+                <b>Hello,</b>
+            </h1>
             <h2>I am  Putri Nurhaliza!</h2>
             <p style={{fontSize:"20px"}}>A 3rd year student who is passionate in Software Engineering.
               Contributed to several projects of web/app development, robotics, and digital marketing.
@@ -59,7 +76,9 @@ const Home = () => {
               />
           </Item>
         </Grid>
-        <Grid item xs={4} sm={4} md={4} key={2} order={{ xs: 1, sm: 1, md:2 }}>
+        <Grid item xs={4} sm={4} md={4} key={2} order={{ xs: 1, sm: 1, md:2 }}
+          style={{zIndex: '1'}}
+        >
           <Image
             src={`${process.env.PUBLIC_URL}/assets/home/PutriNurhaliza2-square.jpg`}
             alt="me"

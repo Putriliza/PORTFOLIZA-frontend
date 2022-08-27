@@ -9,29 +9,36 @@ import Stack from '@mui/material/Stack';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
 
-
 const ProjectItem = ({ project }) => {
     return (
         <Card key={project.id}>
             <CardActionArea>
                 <CardMedia
-                    component="img"
-                    height="400"
-                    image={`${process.env.PUBLIC_URL+project.imgLink}`}
-                    alt={project.title}
+                    component='video'
+                    src={`${process.env.PUBLIC_URL+project.imgLink}`}
+                    autoPlay
+                    loop
+                    muted
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h4" component="div">
                         {project.title}
                     </Typography>
-                    <Typography variant="body2" component="div">
+                    <Typography variant="body1" component="div">
+                        
                         <p>{project.content}</p>
-                        <p>Role:</p>
-                        <ul>
-                            {project.role.map((role, i) =>
-                                <li key={i}>{role}</li>
-                            )}
-                        </ul>
+                        {
+                            project.role.length === 0
+                            ? null
+                            : <>
+                                <p>Role:</p>
+                                <ul>
+                                    {project.role.map((role, i) =>
+                                        <li key={i}>{role}</li>
+                                    )}
+                                </ul>
+                                </>
+                        }
                         <Stack direction="row" spacing={1}>
                             {project.techStack.map((tools, i) =>
                                 <Chip key={i} label={tools} color="secondary" />

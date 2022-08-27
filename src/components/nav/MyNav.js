@@ -8,7 +8,6 @@ import './Nav.css';
 
 import Button from '@mui/material/Button';
 
-import ChaletRoundedIcon from '@mui/icons-material/ChaletRounded';
 import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
 import AutoAwesomeMotionOutlinedIcon from '@mui/icons-material/AutoAwesomeMotionOutlined';
 import BadgeOutlinedIcon from '@mui/icons-material/BadgeOutlined';
@@ -17,7 +16,6 @@ const MyNav = () => {
 	const offCanvasRef = useRef();
 	const offsetValue = -56;
 
-	
 	const closeOffCanvas = () => {
 		if(offCanvasRef.current.backdrop === undefined || offCanvasRef.current.backdrop === null) {
 			console.log('offCanvasRef.current.backdrop is null');
@@ -29,17 +27,21 @@ const MyNav = () => {
 	return (
 		<Navbar collapseOnSelect expand="lg" variant="light">
 			<Container fluid>
-				<Navbar.Brand href="#">Putri Nurhaliza</Navbar.Brand>
+				<Navbar.Brand href="#" style={{fontFamily: 'Dancing Script, cursive', fontSize:'30px', color:'darkslateblue'}}>
+					<b>Putri Nurhaliza</b>
+				</Navbar.Brand>
 				<Navbar.Toggle aria-controls={`offcanvasNavbar-expand-lg`} />
 				<Navbar.Offcanvas
-				id={`offcanvasNavbar-expand-lg`}
-				aria-labelledby={`offcanvasNavbarLabel-expand-lg`}
-				placement="end"
-				ref={offCanvasRef}
+					id={`offcanvasNavbar-expand-lg`}
+					aria-labelledby={`offcanvasNavbarLabel-expand-lg`}
+					placement="end"
+					ref={offCanvasRef}
 				>
 				<Offcanvas.Header closeButton>
-					<Offcanvas.Title id={`offcanvasNavbarLabel-expand-lg`}>
-					PUTRI NURHALIZA
+					<Offcanvas.Title id={`offcanvasNavbarLabel-expand-lg`}
+						style={{fontFamily: 'Dancing Script, cursive', fontSize:'30px', color:'darkslateblue'}}
+					>
+					Putri Nurhaliza
 					</Offcanvas.Title>
 				</Offcanvas.Header>
 				<Offcanvas.Body>
