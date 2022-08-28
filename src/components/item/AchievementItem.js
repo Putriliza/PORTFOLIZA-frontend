@@ -3,6 +3,8 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
+import Chip from '@mui/material/Chip';
+import Stack from '@mui/material/Stack';
 
 const AchievementItem = ({ achievement }) => {
     return (
@@ -24,6 +26,11 @@ const AchievementItem = ({ achievement }) => {
                     <p>{achievement.content}</p>
                     <p className='text-secondary'>{achievement.time}</p>
                 </Typography>
+                <Stack direction="row" spacing={1}>
+                    {achievement.techStack.map((tools, i) =>
+                        <Chip key={i} label={tools} color="secondary" />
+                        )}
+                </Stack>
             </CardContent>
             
         </Card>
