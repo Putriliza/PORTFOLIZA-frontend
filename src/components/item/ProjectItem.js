@@ -31,7 +31,7 @@ const ProjectItem = ({ project }) => {
                             project.role.length === 0
                             ? null
                             : <>
-                                <p>Role:</p>
+                                <p style={{margin: 0}}>Role:</p>
                                 <ul>
                                     {project.role.map((role, i) =>
                                         <li key={i}>{role}</li>

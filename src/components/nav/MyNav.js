@@ -17,9 +17,7 @@ const MyNav = () => {
 	const offsetValue = -56;
 
 	const closeOffCanvas = () => {
-		if(offCanvasRef.current.backdrop === undefined || offCanvasRef.current.backdrop === null) {
-			console.log('offCanvasRef.current.backdrop is null');
-		} else {
+		if (!(offCanvasRef.current.backdrop === undefined || offCanvasRef.current.backdrop === null)) {
 			offCanvasRef.current.backdrop.click();
 		}
 	}

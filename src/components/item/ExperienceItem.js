@@ -56,7 +56,7 @@ const ExperienceItem = ({ experience }) => {
                              experience.role.length === 0
                              ? null
                              : <>
-                                 <p>Role:</p>
+                                 <p style={{margin: 0}}>Role:</p>
                                  <ul>
                                      {experience.role.map((role, i) =>
                                          <li key={i}>{role}</li>
