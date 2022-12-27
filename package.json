@@ -1,7 +1,7 @@
 {
   "name": "portfoliza",
   "version": "0.1.0",
-  "homepage": "http://portfoliza.me",
+  "homepage": "http://portfoliza.me/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.0",
