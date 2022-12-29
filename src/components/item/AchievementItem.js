@@ -26,7 +26,13 @@ const AchievementItem = ({ achievement }) => {
                     <p>{achievement.content}</p>
                     <p className='text-secondary'>{achievement.time}</p>
                 </Typography>
-                <Stack direction="row" spacing={1}>
+                <Stack direction="row" spacing={1}
+                    sx={{
+                        display: "flex", flexWrap: "wrap",
+                        '& .css-1ximusq-MuiChip-root': {margin: '0px 5px 5px 0px'},
+                        '& > :not(style)+:not(style)': {marginLeft: '0px'}
+                    }}
+                >
                     {achievement.techStack.map((tools, i) =>
                         <Chip key={i} label={tools} color="secondary" />
                         )}
