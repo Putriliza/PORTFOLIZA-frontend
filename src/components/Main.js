@@ -32,8 +32,8 @@ const Main = () => {
     <main className='container'>
       <Home />
       <Projects projects={projects}/>
-          <Experiences experiences={experiences} />
-          <Achievements achievements={achievements}/>
+      <Experiences experiences={experiences} />
+      <Achievements achievements={achievements}/>
     </main>
   )
 }

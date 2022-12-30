@@ -1,0 +1,15 @@
+.rotate-obj {
+    animation: rotation 2s infinite ease-in-out;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(-1deg);
+    }
+    20% {
+        transform: rotate(1deg);
+    }
+    100% {
+        transform: rotate(-1deg);
+    }
+  }

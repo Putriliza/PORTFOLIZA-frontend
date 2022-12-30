@@ -12,6 +12,8 @@ import Tooltip from '@mui/material/Tooltip';
 import { BsLinkedin, BsGithub,} from 'react-icons/bs';
 import { MdEmail } from 'react-icons/md';
 
+import './Home.css';
+
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: 'rgba(255, 255, 255, .3)',
   ...theme.typography.body2,
@@ -45,10 +47,11 @@ const Home = () => {
         
         <Grid item xs={8} sm={8} md={8} key={1} order={{ xs: 2, sm: 2, md:1 }}>
           <Item>
-          <h1 style={{color: 'black',
+            <h1 style={{color: 'black',
                 textShadow: '3px 1px 15px white',
                 fontFamily: 'Cookie, cursive',
-                fontSize: '60px'}}>
+                fontSize: '60px'}}
+                className="rotate-obj">
                 <b>Hello,</b>
             </h1>
             <h2>I am  Putri Nurhaliza!</h2>
@@ -84,7 +87,9 @@ const Home = () => {
             alt="me"
             fluid
             roundedCircle
-            style={{border: '20px solid rgba(255, 255, 255, .3)'}}/>
+            style={{border: '20px solid rgba(255, 255, 255, .3)'}}
+            className="rotate-obj"
+            />
         </Grid>
       </Grid>
     </Box>

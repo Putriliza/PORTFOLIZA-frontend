@@ -8,11 +8,8 @@ import {MdExpandMore, MdExpandLess} from 'react-icons/md';
 
 const Projects = ({ projects }) => {
     const [showAllProjects, setShowAllProjects] = useState(false);
-    const handleMoreClick = () => {
-        setShowAllProjects(true);
-    }
-    const handleLessClick = () => {
-        setShowAllProjects(false);
+    const handleShowAllProjects = () => {
+        setShowAllProjects(!showAllProjects);
     }
 
     return (
@@ -51,31 +48,22 @@ const Projects = ({ projects }) => {
 
                 )}
             </Grid>
-            {
-                showAllProjects === false
-                ?   <Button variant="outlined" onClick={handleMoreClick}
-                    style={{
-                        color: 'white',
-                        border: '2px solid white',
-                        borderRadius: '50px',
-                        background: 'rgb(0,0,0,0.1)',
-                        padding: '10px 15px 0 20px',
-                        marginTop: '50px'}}
-                    >
-                            <h5>More <MdExpandMore fontSize='40px'/></h5>
-                    </Button>
-                :   <Button variant="outlined" onClick={handleLessClick}
-                    style={{
-                        color: 'white',
-                        border: '2px solid white',
-                        borderRadius: '50px',
-                        background: 'rgb(0,0,0,0.1)',
-                        padding: '10px 15px 0 20px',
-                        marginTop: '50px'}}
-                    >
-                            <h5>Less <MdExpandLess fontSize='40px'/></h5>
-                    </Button>
-            }
+            <Button variant="outlined" onClick={handleShowAllProjects}
+                style={{
+                    color: 'white',
+                    border: '2px solid white',
+                    borderRadius: '50px',
+                    background: 'rgb(0,0,0,0.1)',
+                    padding: '10px 15px 0 20px',
+                    marginTop: '50px'
+                }}
+            >
+                {showAllProjects ? (
+                    <h5>Less <MdExpandLess fontSize='40px'/></h5>
+                ) : (
+                    <h5>More <MdExpandMore fontSize='40px'/></h5>
+                )}
+            </Button>
         </Box>
     )
   }
